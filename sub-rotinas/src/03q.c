@@ -3,12 +3,9 @@
 
 int converteTempo(int numHoras, char tipo){
   return 
-    tipo == 'h' ?
-    numHoras : 
-    tipo == 'm' ?
-    numHoras * 60:
-    tipo == 's' ?
-    numHoras * 60 * 60 :
+    tipo == 'h' ? numHoras : 
+    tipo == 'm' ? numHoras * 60:
+    tipo == 's' ? numHoras * 60 * 60 :
     0; 
 }
 
