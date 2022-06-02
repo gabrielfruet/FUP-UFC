@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/gabrielfruet/workspaces/vscode-ws/clang/estrutura-condicional'
+make: Leaving directory '/home/gabrielfruet/workspaces/vscode-ws/clang/estrutura-condicional'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
