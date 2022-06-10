@@ -17,9 +17,9 @@ char* lastAsFirst(char* str){
   char* output = calloc(size + 1, sizeof(char));
   output[size] = 0;
 
-  strcpy(output, lastWord + 1);
-  strcpy(output + lastWordSize, ", ");
-  strncpy(output + lastWordSize + 2, str, (size - lastWordSize)*sizeof(char));
+  strcat(output, lastWord + 1);
+  strcat(output, ", ");
+  strcat(output, str);
   return output;
 
 }
@@ -27,7 +27,7 @@ char* lastAsFirst(char* str){
 int main(){
   char nome[100];
   printf("Digite seu nome: ");
-  fgets(nome, 99, stdin);
+  fgets(nome, 100, stdin);
   nome[strlen(nome) - 1] = '\0';
   char* novoNome = lastAsFirst(nome);
   printf("Nome refatorado : %s\n", novoNome);
