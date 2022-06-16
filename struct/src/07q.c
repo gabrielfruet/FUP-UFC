@@ -44,8 +44,8 @@ struct partido* adicionaPartido(char* sigla, struct partido* partido, int* qntdP
   }
   strcpy(partido[*qntdPartidos].sigla, sigla);
   partido->totalPropina = 0;
-  *qntdPartidos += 1;
-  return &partido[*qntdPartidos];
+  (*qntdPartidos) += 1;
+  return &partido[*qntdPartidos - 1];
 }
 /*
  * PROCURA O PARTIDO COM MAIOR PROPINA E RETORNA UM PONTEIRO PARA O PARTIDO
