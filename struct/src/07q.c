@@ -68,7 +68,7 @@ int main(){
   struct partido partidos[MAX_PROPINAS];
   struct partido* partidoAtual;
 
-  int qntdPropinas, qntdPartidos;
+  int qntdPropinas = 0, qntdPartidos = 0;
   bool continuar = true;
 
   for(qntdPropinas = 0; qntdPropinas < MAX_PROPINAS && continuar; qntdPropinas++){
