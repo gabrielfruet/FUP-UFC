@@ -9,8 +9,8 @@
 #include <stdbool.h>
 
 
-void trioPorExtenso(char* dest, unsigned int num){
-  const unsigned int num_ORIGINAL = num;
+void trioPorExtenso(char* dest, unsigned long long num){
+  const unsigned long long num_ORIGINAL = num;
   char* unidades[] = {
     "um",
     "dois",
@@ -83,8 +83,8 @@ void trioPorExtenso(char* dest, unsigned int num){
 
 
 void numeroPorExtenso(char* dest, const char* src){
-  unsigned int num = atoi(src);
-  const unsigned int num_ORG = num;
+  unsigned long long num = atoll(src);
+  const unsigned long long num_ORG = num;
 
   char* classes[5][2] = {
     {"mil"},
@@ -94,7 +94,7 @@ void numeroPorExtenso(char* dest, const char* src){
     {"quadrilhao", "quadrilhao"}
   };
   bool precisa_de_separador = false;
-  unsigned int trio = 1;
+  unsigned int trio = 0;
 
   for(int exp = 15; exp >= 0; exp -= 3){
     trio = num/pow(10,exp);
@@ -115,12 +115,12 @@ void numeroPorExtenso(char* dest, const char* src){
 }
 
 int main(){
-  char ano[11];
+  char ano[100];
   printf("Digite um ano para descobrir por extenso: ");
-  fgets(ano, 10, stdin);
+  fgets(ano, 100, stdin);
   char ano_extenso[151] = "";
   numeroPorExtenso(ano_extenso, ano);
   printf("ANO POR EXTENSO: %s anos\n", ano_extenso);
 
-  return 1;
+  return 0;
 }

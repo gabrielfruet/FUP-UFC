@@ -50,12 +50,16 @@ data_t criaData(const char* data){
 }
 
 void imprimeData(const data_t data){
-  if(data.formato == AMERICANO){
-    printf("FORMATO : AMERICANO, DATA : %02d/%02d/%d\n", data.mes, data.dia, data.ano);
-  }else if(data.formato == BRASILEIRO){
-    printf("FORMATO : BRASILEIRO, DATA : %02d/%02d/%d\n", data.dia, data.mes, data.ano);
-  }else if(data.formato == INVALIDO){
-    printf("DATA INVALIDA!\n");
+  switch(data.formato){
+    case AMERICANO:
+      printf("FORMATO : AMERICANO, DATA : %02d/%02d/%d\n", data.mes, data.dia, data.ano);
+      break;
+    case BRASILEIRO:
+      printf("FORMATO : BRASILEIRO, DATA : %02d/%02d/%d\n", data.dia, data.mes, data.ano);
+      break;
+    case INVALIDO:
+      printf("DATA INVALIDA!\n");
+      break;
   }
 }
 

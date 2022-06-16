@@ -3,7 +3,7 @@
 
 void deleteChar(char* str, char c){
   int p = 0, i = 0;
-  for(; str[i] != 0; i++){
+  for(; str[i]; i++){
     if(str[i] != c){
       str[p] = str[i];
       p++;

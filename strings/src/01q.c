@@ -2,21 +2,16 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-#define inverte ^32
+#define inverte ^= 32
 
 bool eLetra(char c){
-  for(char letra = 'a'; letra < 'z'; letra++){
-    if(c == letra || c == (letra inverte))
-      return true;
-  }
-  return false;
+  return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
 }
 
 void inverteCaixa(char* str){
-  for(int c = 0; c < strlen(str); c++){
-    if(eLetra(str[c]))
-      str[c] = str[c] inverte;
-  }
+  for(;*str; str++)
+    if(eLetra(*str))
+      *str inverte;
 }
 
 int main(){

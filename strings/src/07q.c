@@ -11,7 +11,7 @@ void imprimeSufixos(char* str){
 int main(){
   char data[100];
   printf("Digite uma string: "); 
-  fgets(data,99,stdin);
+  fgets(data,100,stdin);
   imprimeSufixos(data);
   return 0;
 }
